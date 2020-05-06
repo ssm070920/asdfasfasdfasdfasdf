@@ -1,5 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const token = process.argv.length == 2 ? process.env.token : "";
+const moment = require("moment");
+require("moment-duration-format");
 
 client.on('ready', () => {
   console.log(`${client.user.tag} 온라인!`);
@@ -188,4 +191,4 @@ async function AutoMsgDelete(message, str, delay = 3000) {
 
 
 
-client.login('NzAxNDcyNjE1ODQ3NjkwMjcx.XrF4nA.Vbp_BcQMMe4hHTXJwxuoTYQsy80');
+client.login(token);
