@@ -102,6 +102,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   }
+  
   if (message.content === '/온') {
     message.delete();  
     if (!message.member.hasPermission('MANAGE_MESSAGES')) {
